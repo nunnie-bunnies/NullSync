@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.1.1 (2026-05-13)
+
+Maintenance release. Verifies the in-app update notifier end-to-end.
+
 ## v1.1.0 (2026-05-13)
 
 First public release.
