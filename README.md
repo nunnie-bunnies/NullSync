@@ -10,6 +10,32 @@ When you and a friend can't connect because of a checksum mismatch, NullSync com
 
 ---
 
+## Why NullSync exists
+
+If you've played heavily modded Stellaris multiplayer, you've probably experienced this:
+
+- same mod list
+- same load order
+- same game version
+- same DLC
+
+…but the lobby still says:
+
+> **"Game version differs."**
+
+Then begins the ritual:
+
+- screenshots in Discord
+- unsubscribe / re-subscribe
+- reordering mods blindly
+- comparing checksums manually
+- restarting the launcher three times
+- sacrificing an envoy to the checksum gods
+
+NullSync exists to tell you exactly what's wrong instead of making you guess.
+
+---
+
 ## Features
 
 - Fingerprints your active Stellaris mod setup (load order, file integrity, descriptor info)
