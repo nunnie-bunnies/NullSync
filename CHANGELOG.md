@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.2.1 (2026-05-13)
+
+- New **About** tab with project info, version, credit, and quick links
+- Discord community button on the About tab (links to the project's invite)
+- Moved the About card out of the Settings tab to its own dedicated home
+
 ## v1.2.0 (2026-05-13)
 
 Introduced the Premium tier and License tab.
