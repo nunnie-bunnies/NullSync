@@ -36,6 +36,22 @@ NullSync exists to tell you exactly what's wrong instead of making you guess.
 
 ---
 
+## Screenshots
+
+**Fingerprint tab** - scan your mods, see your predicted checksum and per-mod manifest.
+
+![NullSync Fingerprint tab](screenshots/fingerprint.png)
+
+**Compare tab** - paste your friend's share code, get a colour-coded breakdown of every difference: missing mods, content changes, load order mismatches.
+
+![NullSync Compare tab](screenshots/compare.png)
+
+**Diagnose tab** - one-click health audit of your Stellaris install. Finds broken Workshop subscriptions, mods with script errors in error.log, and other silent issues that ruin multiplayer.
+
+![NullSync Diagnose tab](screenshots/diagnose.png)
+
+---
+
 ## Features
 
 - Fingerprints your active Stellaris mod setup (load order, file integrity, descriptor info)
