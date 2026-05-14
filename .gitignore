@@ -1,0 +1,24 @@
+# Source files - this repo is binary-distribution only.
+*.py
+*.spec
+*.pyc
+__pycache__/
+build/
+dist/
+
+# IDE / editor cruft
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Local working files
+*.bak
+*.tmp
+*.log
+local_notes.md
+
+# Don't ever commit the exe to git history - upload it as a release asset
+NullSync.exe

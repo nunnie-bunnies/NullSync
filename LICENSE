@@ -1,0 +1,44 @@
+NullSync Software License
+=========================
+
+Copyright (c) 2026 Nunnie Bunnies (Mao Mao). All rights reserved.
+
+This software ("NullSync") is provided as a compiled binary for personal,
+non-commercial use only. By downloading or using NullSync, you agree to the
+following terms:
+
+1. PERMITTED USE
+   You may download, install, and run NullSync on Windows machines you own
+   or control for the purpose of diagnosing your own Stellaris multiplayer
+   mod setup.
+
+2. RESTRICTIONS
+   Without prior written permission from the copyright holder, you may NOT:
+   - Redistribute, mirror, repackage, or sell the binary
+   - Reverse engineer, decompile, or disassemble the binary
+   - Extract, copy, or reuse any embedded assets (icons, images, fonts)
+   - Use NullSync as part of any commercial product or service
+   - Remove, alter, or obscure any copyright or attribution notices
+
+3. NO WARRANTY
+   NullSync is provided "AS IS" without warranty of any kind. The author is
+   not liable for any data loss, system damage, or other harm arising from
+   its use. NullSync does not modify Stellaris game files; it only reads
+   from your existing installation.
+
+4. UPDATES AND TELEMETRY
+   On startup, NullSync queries the GitHub Releases API over HTTPS to check
+   for a newer version. No personal data, mod data, or usage telemetry is
+   collected or transmitted. This check can be disabled in Settings.
+
+5. THIRD-PARTY COMPONENTS
+   NullSync's binary bundles open-source Python runtime libraries under
+   their respective licenses. These are independent of this license and
+   their terms are preserved in the binary distribution.
+
+6. CONTACT
+   For licensing inquiries, custom permissions, or bug reports, open an
+   issue on the GitHub repository where this software is hosted.
+
+By using NullSync, you acknowledge that you have read and agree to these
+terms. If you do not agree, do not install or use the software.
