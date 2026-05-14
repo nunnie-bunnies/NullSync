@@ -1,5 +1,7 @@
 # NullSync
 
+NULLSYNC automatically detects Stellaris multiplayer incompatibilities including mod mismatches, load order conflicts, altered files, DLC differences, and desync risks
+
 > A desktop tool for diagnosing Stellaris multiplayer mod mismatches.
 
 When you and a friend can't connect because of a checksum mismatch, NullSync compares your mod setups and tells you what's actually different. It works even when one of you has a mod that "looks installed" in the launcher but silently failed to load.
