@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.3.3 (2026-05-13)
+
+- Renamed the user-facing "predicted checksum" to **sync checksum** throughout the app and documentation. The previous wording implied NullSync was trying to predict Stellaris's internal checksum algorithm. What NullSync actually does is generate its own deterministic checksum from your setup - if two players see the same value, their setups are compatible and the game will accept them together. The new name reflects that.
+
 ## v1.3.2 (2026-05-13)
 
 - Added an in-development teaser row to the startup splash. Points to an upcoming Stellaris mod focused on fleets and how they handle losing ships.
@@ -10,7 +14,7 @@ First public release.
 
 **Core features**
 
-- Fingerprints your active Stellaris mod setup: load order, file integrity, descriptor info, predicted in-game checksum
+- Fingerprints your active Stellaris mod setup: load order, file integrity, descriptor info, sync checksum
 - Shareable codes for quickly comparing setups with a friend over chat
 - Side-by-side compare with mismatch attribution, version detection, file-level differences, and missing-dependency surfacing
 - Diagnose tab: identifies broken Workshop subscriptions, mods with critical script errors in error.log, and missing dependencies

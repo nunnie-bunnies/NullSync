@@ -38,7 +38,7 @@ NullSync exists to tell you exactly what's wrong instead of making you guess.
 
 ## Screenshots
 
-**Fingerprint tab** - scan your mods, see your predicted checksum and per-mod manifest.
+**Fingerprint tab** - scan your mods, see your sync checksum and per-mod manifest.
 
 ![NullSync Fingerprint tab](screenshots/fingerprint.png)
 
@@ -57,7 +57,7 @@ NullSync exists to tell you exactly what's wrong instead of making you guess.
 - Fingerprints your active Stellaris mod setup (load order, file integrity, descriptor info)
 - Generates a small share code you can send to a friend over Discord
 - Compares two fingerprints side-by-side and explains every mismatch
-- Predicts what the in-game checksum will be before you launch
+- Generates a sync checksum from your setup - if yours matches your friend's, you'll connect
 - Diagnose tab: catches broken Workshop subscriptions, mods with script errors, missing dependencies
 - Three themes: Sakura, Cobalt, Midnight
 - Windows 11 Acrylic glass effect (optional)
@@ -94,7 +94,7 @@ Open the Diagnose tab and click **Run All Checks**. It will surface anything obv
 
 NullSync scans your Stellaris installation when you click Scan. It reads which mods are active, the order they load in, and metadata about each one. From that it produces two things:
 
-- A predicted in-game checksum, calculated using an approach that mirrors the way Stellaris arrives at its own checksum
+- A deterministic sync checksum derived from your mod setup. The checksum has one useful property: if two players see the same checksum, their setups are byte-for-byte compatible and they will connect cleanly
 - A shareable fingerprint code that captures enough to compare against a friend's setup, without exposing anything personal about your machine
 
 When you paste a friend's code, NullSync aligns both setups and identifies what's different - missing mods, version mismatches, files that diverge between the two of you, mods that loaded for one player but errored for the other.
@@ -137,7 +137,7 @@ NullSync is read-only and runs outside the game, so it has no effect on achievem
 
 **Will using NullSync change my Stellaris checksum?**
 
-No. NullSync does not modify anything in your Stellaris folder. Your actual game checksum is whatever Stellaris computes when it loads your mods - NullSync just predicts it.
+No. NullSync does not modify anything in your Stellaris folder. NullSync computes its own sync checksum from your setup, independent of Stellaris. Matching sync checksums between players means the underlying setups are identical, so the game will accept them together.
 
 **My friend's share code is huge. Did I get it wrong?**
 
@@ -170,9 +170,9 @@ This usually means `dlc_load.json` is empty. Fix:
 
 Then re-run NullSync.
 
-**My checksum matches my friend's predicted checksum, but Stellaris still won't let us connect**
+**Our sync checksums match, but Stellaris still won't let us connect**
 
-Check the **Mod Load Health** section of the compare result. If a mod's files match between both players but it's failing to load on one side (script errors, missing dependencies), the real in-game checksum will mismatch even when files are identical. NullSync flags this with a warning.
+Check the **Mod Load Health** section of the compare result. If a mod's files match between both players but it's failing to load on one side (script errors, missing dependencies), the in-game checksum will mismatch even when files are identical. NullSync flags this with a warning.
 
 The fix is usually for the affected player to unsubscribe + re-subscribe to the broken mod, or to remove the mod from both playsets.
 
