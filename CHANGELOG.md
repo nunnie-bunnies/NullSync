@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.3.1 (2026-05-13)
+
+- The welcome splash is now an in-window overlay that covers the entire NullSync window. It cannot be moved or minimised aside; users see it for the full duration of the countdown. Premium users continue to skip it entirely.
+- Workshop mod entries on the splash now include a short one-line description.
+
 ## v1.3.0 (2026-05-13)
 
 - **Terms of Service dialog** on first launch (or after meaningful TOS changes). Users must accept before the app continues. Declining quits the app cleanly.
