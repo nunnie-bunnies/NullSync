@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.3.0 (2026-05-13)
+
+- **Terms of Service dialog** on first launch (or after meaningful TOS changes). Users must accept before the app continues. Declining quits the app cleanly.
+- **Welcome splash** on startup for free-tier users: a small window with a thank-you message, Discord and GitHub links, and a quick list of the author's published Stellaris Workshop mods. The close button enables after a 6-second countdown.
+- Premium users skip the welcome splash entirely.
+- TOS preference is versioned, so future TOS revisions can re-prompt without disrupting existing users.
+
 ## v1.2.1 (2026-05-13)
 
 - New **About** tab with project info, version, credit, and quick links
