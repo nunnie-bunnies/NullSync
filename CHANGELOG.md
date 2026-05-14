@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.3.2 (2026-05-13)
+
+- Added an in-development teaser row to the startup splash. Points to an upcoming Stellaris mod focused on fleets and how they handle losing ships.
+
 ## v1.3.1 (2026-05-13)
 
 First public release.
