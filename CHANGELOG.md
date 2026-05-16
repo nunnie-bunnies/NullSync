@@ -1,5 +1,14 @@
 # Changelog
 
+## v2.0.3 (2026-05-16)
+
+**Polish + edge-case pass.** No new features — just fixing three issues that would have bitten users in real use:
+
+### Fixed
+- **Asset paths now work in the slim PyInstaller bundle.** v2.0.2 used `Path(__file__).parent.parent / "assets/..."` to find the app icon and mascot images, which resolves to a temp extraction dir at runtime in a frozen build, not the bundle root — meaning the mascot in the Help dialog and the window icons silently failed to load in the released exe. Added `logic.resource_path()` that handles both dev mode (qt/'s parent) and PyInstaller's `sys._MEIPASS` extraction dir.
+- **Settings round-trip across tabs.** Each tab was caching `logic.load_settings()` in `self._settings` at init and writing back from that cached dict. Concrete bug: activate a license in the License tab → switch to Settings tab → try to pick a Premium theme → the premium gate would block you because Settings' cached settings still showed `premium_active=False`. Now writes go through a new `logic.update_setting(key, value)` atomic load-modify-save helper, and reads in slot handlers go through `logic.current_settings()` for live state.
+- **TOS dialog now shows the NullSync icon** in its taskbar entry and title bar instead of the generic Python icon. Matters because the TOS prompt fires *before* the main window exists, so it was the first thing users saw and the only icon.
+
 ## v2.0.2 (2026-05-16)
 
 **Three things landed:** Help dialog wired up, Compare per-mod drill-down ported, and the exe is now **73 MB** (down from 275 MB).
