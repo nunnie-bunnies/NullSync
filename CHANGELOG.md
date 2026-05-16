@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.4.2 (2026-05-16)
+
+**More theme polish.**
+
+- **Killed the blue hover leakage on tabs and buttons.** v1.4.1 patched CTk's default `fg_color` and `hover_color`, but tab strips use additional theme keys (`selected_color`, `selected_hover_color`, `unselected_hover_color`, plus CTkTabview's `segmented_button_*` variants) that were still serving the original dark-blue preset. Now all of them get a Nullcore-palette color, so hovering anywhere gives you a warm-amber tint instead of a blue glow.
+- **BETA badge** next to the NULLSYNC title — small gold pill, dark warm fill, matches the brand identity of the rest of the banner. Signals to first-time users that the project is still iterating.
+- Scrollbars, scrollable frames, text boxes, dropdown menus, switches, checkboxes, sliders, progress bars, and inputs all now consistently themed (previously a few stragglers were still blue-tinted).
+
 ## v1.4.1 (2026-05-16)
 
 **Nullcore theme polish pass.** Visual fixes for issues that landed with v1.4.0:
