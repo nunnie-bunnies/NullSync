@@ -1,5 +1,36 @@
 # Changelog
 
+## v2.0.0 (2026-05-16)
+
+**Full UI rewrite in PySide6 / Qt.** The v1.4.x line in CustomTkinter couldn't reach the visual quality of the rest of the Nullcore product family — flat widget rendering with no gradient brushes, no widget transparency, no real drop shadows. v2.0.0 is a from-scratch UI built in Qt that finally has the polish we've been chasing.
+
+### Visual overhaul
+- **Borderless window** with custom title bar (drag, double-click maximize, min/max/close buttons that glow gold on hover).
+- **Windows 11 acrylic backdrop** — the desktop subtly blurs through the app, with a semi-transparent gradient + diagonal stripe layer painted over it.
+- **Continuously animated diagonal gold stripes** running across the entire window background. CTk couldn't do this; Qt's painting model handles it natively.
+- **NULLSYNC wordmark** painted with a vertical gold gradient (light → standard → deep gold) plus a soft gold drop-shadow glow. **BETA badge** with its own subtle shadow next to it.
+- **Gold gradient divider** under the banner, fading in from edges and peaking center.
+- **Content card** wrapping the tab area — rounded corners, semi-transparent dark fill, drop shadow, gold-dim border edge.
+- **Themed tab strip** — gold accent on the selected tab, warm-amber hover on others. No more blue leakage from CTk's dark-blue preset.
+- **All standard controls themed** end-to-end: buttons, inputs, checkboxes, dropdowns, scrollbars, progress bars, switches.
+
+### Functional parity (mostly)
+- **Fingerprint tab** — full port. Scan, progress bar, results table, save fingerprint file, quick share code, sync checksum display with copy button.
+- **Compare tab** — core port. Two-panel "Yours" / "Theirs" loaders (file OR pasted share code), Compare button, checksum match/mismatch verdict, impact-ranked diff sections (mods you have, mods they have, mods that differ, load order, DLC). Per-mod file-level drill-down (the largest sub-panel in the CTk version) is deferred to v2.0.1.
+- **Diagnose tab** — full port. Background-threaded Run Checks pipeline, color-coded result rows for all check categories.
+- **Settings tab** — full port. Theme picker (with premium gate), update-check toggle (gates both update check and heartbeat).
+- **License tab** — full port. Activation form, status display, deactivate flow.
+- **About tab** — full port. Hero card, early-version notice, looking-for-testers card, community links, bug-report tools, license/privacy info.
+
+### Under the hood
+- Business logic (mod scanning, fingerprint generation, checksum compute, Steam discovery, share-code encode/decode) lives in the existing `stellaris_sync.py` module and is re-exported via a `logic.py` shim. Both UI codebases (the legacy CTk and the new Qt one) call the same underlying functions, so any fingerprint produced by v1.4.x compares perfectly against one produced by v2.0.0.
+- Heartbeat / TOS / settings persistence carries over from v1.4.x — your saved theme, license key, Stellaris folder, and TOS-agreed flag transfer cleanly.
+- File size is ~275 MB (vs ~38 MB on v1.4.x). Qt's bundle is heavier than CustomTkinter's. v2.0.1 will trim by excluding unused Qt modules (QtWebEngine, etc.).
+
+### Migration
+- Existing v1.4.x users: the in-app update banner will point you at this release. Download `NullSync.exe`, drop it next to (or replace) your existing one, launch. Your settings carry over.
+- The CustomTkinter v1.4.x build is retired. Source stays in git history for reference, but the v2.x line is the active codebase going forward.
+
 ## v1.4.2 (2026-05-16)
 
 **More theme polish.**
