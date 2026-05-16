@@ -225,6 +225,12 @@ Use the [Issues tab](https://github.com/nunnie-bunnies/NullSync/issues) for bugs
 
 ---
 
+## Helping out
+
+NullSync is early and there's a lot still being smoothed over. If you'd like to help test new features before they ship, give feedback on rough edges, or play co-op Stellaris sessions to validate mod setups against real multiplayer, hop into the [Discord](https://discord.gg/DRXRnPDmbJ) and say hi. No prior experience needed.
+
+---
+
 ## License
 
 All rights reserved. See [LICENSE](LICENSE) for full terms.
