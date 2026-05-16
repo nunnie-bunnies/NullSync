@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.4.1 (2026-05-16)
+
+**Nullcore theme polish pass.** Visual fixes for issues that landed with v1.4.0:
+
+- **Glass effect** now actually applies on Windows 11. v1.4.0 fired the DWM call before the window's HWND was fully realized, so it silently no-op'd. Deferred to 250ms after window mapping.
+- **Stripes are now visible.** v1.4.0 had them rendering behind everything, but CTk's opaque widget backgrounds hid them. Now the banner has the diagonal stripes baked directly into its background image (PIL-rendered gradient + stripes + soft gold accent line along the bottom), with a slow pan animation. Stripes also still render in the window margins via the background canvas.
+- **Gold reads as gold, not yellow.** Shifted the accent tone from `#D4AF37` (companion's literal hex) to `#CFA53D` (slightly warmer/richer). The companion has WPF gradient brushes and drop shadows that lift `#D4AF37` into looking metallic — CTk's flat fill rendering needs a slightly warmer base to compensate.
+
 ## v1.4.0 (2026-05-16)
 
 **Nullcore theme + anonymous install telemetry.**
