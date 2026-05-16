@@ -1,5 +1,12 @@
 # Changelog
 
+## v2.0.1 (2026-05-16)
+
+**TOS dialog + startup splash.**
+
+- **Terms of Service prompt is back.** v2.0.0 launched directly into the main window without re-checking the saved `tos_agreed_version`. v2.0.1 fires the same TOS check the CTk app did: if your saved version is below the current `TOS_VERSION` (which bumped to 2 when the heartbeat disclosure was added), you get re-prompted on launch. Decline cleanly exits the app; accept saves the new version and continues. Built as a real Qt dialog with a scrollable read-only body and gold-bordered accept / decline buttons.
+- **Startup splash overlay.** Brand wordmark + BETA pill + tagline hold at full opacity for 2.5 seconds, then fade to zero over 1 second using a real `QPropertyAnimation` on opacity — direct port of the Nullcore Companion's `MainWindow.xaml` splash animation. Eats clicks while visible so a user can't fight the fade by clicking through to the main window. Auto-hides after fade.
+
 ## v2.0.0 (2026-05-16)
 
 **Full UI rewrite in PySide6 / Qt.** The v1.4.x line in CustomTkinter couldn't reach the visual quality of the rest of the Nullcore product family — flat widget rendering with no gradient brushes, no widget transparency, no real drop shadows. v2.0.0 is a from-scratch UI built in Qt that finally has the polish we've been chasing.
