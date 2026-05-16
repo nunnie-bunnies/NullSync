@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.0.5 (2026-05-16)
+
+**Themed alert dialogs everywhere.** The "Mod load issues detected" popup (and every other alert in the app) was falling back to a native Qt message box — stark white-on-grey Windows chrome with a blue accent, which clashed hard with NullSync's gold-on-black aesthetic and was genuinely hard to read against the rest of the UI.
+
+### Fixed
+- **All alerts now use the Nullcore theme.** Built a `dialogs.py` module with the same `info` / `warning` / `critical` / `question` surface as `QMessageBox`, rendered as a dark gold-bordered panel with a Constantia title, role-colored glyph (ℹ / ⚠ / ✖ / ?), and primary/secondary gold-themed buttons. Routed every QMessageBox call site through it:
+  - Mod load issues warning (the one that triggered this)
+  - Fingerprint scan: deep-scan confirm, "not found", "no folder selected", "folder not found", scan-failed, save success, save-failed
+  - Compare: "missing fingerprints", fingerprint read error, bad share code
+  - Settings: premium-theme gate, theme-changed, update found, up-to-date, update-check failed
+  - License: missing-key warning, license-saved, deactivate confirm (now reads "Deactivate / Cancel" instead of "Yes / No"), deactivated
+
 ## v2.0.4 (2026-05-16)
 
 **Splash polish.** The startup splash wasn't quite right in v2.0.3 — felt like a Windows loading dialog instead of a clean brand reveal.
