@@ -1,5 +1,13 @@
 # Changelog
 
+## v2.0.4 (2026-05-16)
+
+**Splash polish.** The startup splash wasn't quite right in v2.0.3 — felt like a Windows loading dialog instead of a clean brand reveal.
+
+### Fixed
+- **No more "loading…" text on the splash.** The companion's startup splash is brand-only — wordmark, BETA pill, tagline, that's it. NullSync's splash had a "loading…" line at the bottom that made it look like a generic application loading screen rather than the graceful brand reveal it was supposed to mirror. Pulled the label.
+- **First-frame UI flash is gone.** The splash overlay was constructed inside `showEvent`, which fires *after* the main window's first paint — so for one frame you'd see the actual tabs / banner / striped background before the splash slid over the top. Moved overlay construction into `__init__` so it's parented and shown before the window ever paints. The splash now covers the central widget from frame zero; `begin()` is still called in `showEvent` to kick off the hold→fade timer once the window is mapped.
+
 ## v2.0.3 (2026-05-16)
 
 **Polish + edge-case pass.** No new features — just fixing three issues that would have bitten users in real use:
