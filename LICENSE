@@ -27,9 +27,14 @@ following terms:
    from your existing installation.
 
 4. UPDATES AND TELEMETRY
-   On startup, NullSync queries the GitHub Releases API over HTTPS to check
-   for a newer version. No personal data, mod data, or usage telemetry is
-   collected or transmitted. This check can be disabled in Settings.
+   On startup, NullSync makes two small outbound calls over HTTPS:
+   (a) a check against the GitHub Releases API to see whether a newer
+   version is available, and (b) an anonymous heartbeat (sent at most
+   once every 24 hours) containing only a hashed machine identifier,
+   the product name, and the version number. No personal data, mod
+   data, file contents, or usage telemetry is collected or transmitted.
+   Both calls are gated by the "Check for updates on startup" setting
+   and can be disabled together from the Settings tab.
 
 5. THIRD-PARTY COMPONENTS
    NullSync's binary bundles open-source Python runtime libraries under
