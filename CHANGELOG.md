@@ -113,7 +113,7 @@
 - **Windows 11 acrylic glass backdrop** is now on by default for the Nullcore theme without needing a premium activation or a manual toggle. Other themes still respect the existing premium gate.
 
 ### Analytics — anonymous install heartbeat
-- On startup, the app now sends an anonymous "I exist" heartbeat to `https://[redacted]` so the project can count unique installs versus simple GitHub download totals (which can't tell new users from existing users re-downloading after an update banner).
+- On startup, the app now sends an anonymous "I exist" heartbeat to the project's license server so we can count unique installs versus simple GitHub download totals (which can't tell new users from existing users re-downloading after an update banner).
 - The only data sent is: a **SHA256 hash** of your machine ID (the raw identifier never leaves your computer — it's hashed locally first), the product name "NullSync", and the version number.
 - Sent **at most once per 24 hours** (throttled via a timestamp in settings.json).
 - Gated by the same single **"Check for updates on startup"** toggle that controls the GitHub update check. Untick it in Settings and both go off.

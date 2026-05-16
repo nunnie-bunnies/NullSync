@@ -113,7 +113,7 @@ Yes. It reads from your existing Stellaris files and writes only its own setting
 
 **Does it phone home or collect any data about me?**
 
-No telemetry, no analytics, no usage data. The only outbound network request is a single HTTPS call to GitHub's public release API on startup, to see whether a new version is available. You can disable this in Settings.
+No usage data, no file contents, no analytics. The app does two small outbound calls on startup: one to GitHub's public release API to check for a new version, and one anonymous "I exist" heartbeat (sent at most once every 24 hours) so the project can count unique installs. The heartbeat sends only a hashed machine ID, the product name, and the version — no name, no email, no file paths. Both calls are gated by the same **Check for updates on startup** toggle in Settings — untick it and both stop.
 
 **Why is the .exe so big (around 36 MB)?**
 
