@@ -1,5 +1,22 @@
 # Changelog
 
+## v2.0.2 (2026-05-16)
+
+**Three things landed:** Help dialog wired up, Compare per-mod drill-down ported, and the exe is now **73 MB** (down from 275 MB).
+
+### Added
+- **Help dialog** — the banner's Help button now opens a real themed Qt dialog (gold title, mascot, scrollable HELP_TEXT body, "Got it" close). Same content the CTk app shipped, pulled from the shared logic shim so both UIs stay in sync. Previously a `print()` placeholder.
+- **Compare per-mod file drill-down** — every mismatched mod in the Compare results is now a collapsible card. Click the header to expand and see:
+  - Recommended action banner (specific to that mod's mismatch shape)
+  - "Loose/junk files causing this diff" warning when applicable (dev artifacts like `.git/`, user junk like `Thumbs.db`)
+  - Every differing file with its kind marker (`− only yours`, `+ only theirs`, `~ differs`), impact-classification emoji + label (script / UI / loc / cosmetic / metadata / other), full path, and size-detail
+  - Files sorted by impact (high → none) and then alphabetically
+  - Header always shows the impact verdict, category breakdown, and version mismatch warning when applicable
+
+### Changed
+- **Slim PyInstaller bundle.** Excluded ~50 Qt modules NullSync doesn't use — QtWebEngine (~75 MB), Qt3D (~20 MB), QtQuick / QtQml (~30 MB), QtMultimedia (~15 MB), plus QtCharts, QtPdf, QtNetwork, QtSql, QtSvg, QtOpenGL, QtNfc, QtBluetooth, QtPositioning, QtLocation, QtSerialPort, QtTextToSpeech, QtPrintSupport, and a handful of others. Final exe is **73 MB** vs v2.0.1's 275 MB. **NullSync only uses QtCore + QtGui + QtWidgets.**
+- The `logic.py` shim now finds `stellaris_sync.py` correctly when running from a PyInstaller bundle (via `sys._MEIPASS`) as well as from a dev source tree. Single change but it's what made the slim build runnable.
+
 ## v2.0.1 (2026-05-16)
 
 **TOS dialog + startup splash.**
