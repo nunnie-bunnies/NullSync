@@ -113,11 +113,11 @@ Yes. It reads from your existing Stellaris files and writes only its own setting
 
 **Does it phone home or collect any data about me?**
 
-No usage data, no file contents, no analytics. The app does two small outbound calls on startup: one to GitHub's public release API to check for a new version, and one anonymous "I exist" heartbeat (sent at most once every 24 hours) so the project can count unique installs. The heartbeat sends only a hashed machine ID, the product name, and the version — no name, no email, no file paths. Both calls are gated by the same **Check for updates on startup** toggle in Settings — untick it and both stop.
+No usage data, no file contents, no analytics. The app does two small outbound calls on startup: one to GitHub's public release API to check for a new version, and one anonymous "I exist" heartbeat (sent at most once every 24 hours) so the project can count unique installs. The heartbeat sends only a hashed machine ID, the product name, and the version, with no name, no email, and no file paths. Both calls are gated by the same **Check for updates on startup** toggle in Settings; untick it and both stop.
 
-**Why is the .exe so big (around 73 MB)?**
+**Why is the .exe so big (around 120 MB)?**
 
-The binary bundles a Python runtime and all UI dependencies into one file so you don't have to install anything. Most of the size is the runtime, not NullSync itself.
+The binary bundles everything it needs to run into one file so you don't have to install anything. Most of the size is the bundled runtime and UI libraries, not NullSync itself.
 
 **Do I need Python installed?**
 
