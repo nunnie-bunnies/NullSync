@@ -170,7 +170,7 @@ This usually means `dlc_load.json` is empty. Fix:
 
 Then re-run NullSync.
 
-**Our sync checksums match, but Stellaris still won't let us connect**
+**Your sync checksums match, but Stellaris still won't let you connect**
 
 Check the **Mod Load Health** section of the compare result. If a mod's files match between both players but it's failing to load on one side (script errors, missing dependencies), the in-game checksum will mismatch even when files are identical. NullSync flags this with a warning.
 
