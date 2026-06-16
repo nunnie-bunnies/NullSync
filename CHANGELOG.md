@@ -1,5 +1,16 @@
 # Changelog
 
+## v2.0.7 (2026-06-15)
+
+**Installer + fewer antivirus false positives.**
+
+### Changed
+- NullSync now ships as a small installer instead of a single loose .exe. It installs per-user (no admin needed) and adds a Start menu shortcut. This packaging trips far fewer antivirus false positives than the previous single-file build.
+- The anonymous install count is now sent only after the app has been open for a while, rather than right at launch. Short sessions never send anything, and it avoids the "connects to a server the moment it starts" pattern that antivirus tools flag. It is still tied to the "check for updates on startup" toggle and stays anonymous (hashed machine identifier, app name, and version only).
+
+### Added
+- An [ANTIVIRUS](ANTIVIRUS.md) page explaining why compiled apps like this sometimes get flagged, how to confirm it is a false positive on VirusTotal, and how to allow it.
+
 ## v2.0.6 (2026-06-15)
 
 **Update notifications + build improvements.**

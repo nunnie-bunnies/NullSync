@@ -6,7 +6,7 @@ NULLSYNC automatically detects Stellaris multiplayer incompatibilities including
 
 When you and a friend can't connect because of a checksum mismatch, NullSync compares your mod setups and tells you what's actually different. It works even when one of you has a mod that "looks installed" in the launcher but silently failed to load.
 
-[**Download latest release →**](https://github.com/nunnie-bunnies/NullSync/releases/latest)
+[**Download the latest release**](https://github.com/nunnie-bunnies/NullSync/releases/latest)
 
 ---
 
@@ -67,11 +67,12 @@ NullSync exists to tell you exactly what's wrong instead of making you guess.
 
 ## Install
 
-1. Grab `NullSync.exe` from the [Releases page](https://github.com/nunnie-bunnies/NullSync/releases/latest)
-2. Run it. No installer, no admin rights, no extra files to manage
-3. Settings persist to `%APPDATA%\NullSync\`
+1. Grab the `NullSync-Setup` installer from the [Releases page](https://github.com/nunnie-bunnies/NullSync/releases/latest)
+2. Run it. It installs per-user, so no admin rights are needed
+3. Launch NullSync from the Start menu (or the desktop shortcut if you chose one)
+4. Settings persist to `%APPDATA%\NullSync\`
 
-The first time you run it Windows SmartScreen may warn you about an unsigned binary - this is normal for small independent projects. Click **More info** then **Run anyway**.
+Windows SmartScreen or your antivirus may warn you about the unsigned installer. This is normal for small independent projects and does not mean anything is wrong. For SmartScreen, click **More info** then **Run anyway**. For why antivirus sometimes flags compiled apps like this, and how to verify it for yourself, see [ANTIVIRUS.md](ANTIVIRUS.md).
 
 ---
 
@@ -115,21 +116,21 @@ Yes. It reads from your existing Stellaris files and writes only its own setting
 
 No usage data, no file contents, no analytics. The app does two small outbound calls on startup: one to GitHub's public release API to check for a new version, and one anonymous "I exist" heartbeat (sent at most once every 24 hours) so the project can count unique installs. The heartbeat sends only a hashed machine ID, the product name, and the version, with no name, no email, and no file paths. Both calls are gated by the same **Check for updates on startup** toggle in Settings; untick it and both stop.
 
-**Why is the .exe so big (around 120 MB)?**
+**Why is the download so big (around 120 MB)?**
 
-The binary bundles everything it needs to run into one file so you don't have to install anything. Most of the size is the bundled runtime and UI libraries, not NullSync itself.
+NullSync bundles everything it needs to run, so you do not have to install Python or anything else. Most of the size is the bundled runtime and UI libraries, not NullSync itself.
 
 **Do I need Python installed?**
 
-No. The .exe is self-contained.
+No. NullSync is self-contained.
 
 **Will it work on Linux or Mac?**
 
 Not currently. Windows 10/11 (64-bit) only.
 
-**Windows SmartScreen flagged the download. Is it malware?**
+**Windows SmartScreen or my antivirus flagged the download. Is it malware?**
 
-No. The binary is not code-signed (code signing certs are expensive for small indie projects). Windows treats any unsigned executable from a small distributor with suspicion by default. The download comes from this verified GitHub repository - if you want extra reassurance, scan the .exe with VirusTotal before running.
+No. NullSync is not code-signed (code signing certs are expensive for small indie projects), and compiled apps that bundle a runtime commonly trip generic antivirus heuristics. This is a known, industry-wide false positive, not a real detection. The full explanation, how to confirm it on VirusTotal, and how to allow it are in [ANTIVIRUS.md](ANTIVIRUS.md).
 
 **Does NullSync support Stellaris with ironman or achievements enabled?**
 
@@ -188,7 +189,7 @@ Try toggling the Glass Effect off in Settings, restart NullSync. Some Windows co
 
 Common causes:
 
-1. Antivirus is quarantining unsigned binaries. Whitelist `NullSync.exe`
+1. Antivirus quarantined part of the install. This is a known false positive on compiled apps; see [ANTIVIRUS.md](ANTIVIRUS.md) for why and how to allow it
 2. The settings file at `%APPDATA%\NullSync\settings.json` is corrupted. Delete it and relaunch
 3. Conflict with another Python installation - this should never happen since the runtime is bundled, but rebooting tends to clear weirdness
 
@@ -200,7 +201,13 @@ If none of these help, open an [issue](https://github.com/nunnie-bunnies/NullSyn
 
 NullSync is closed source. Only the compiled binary is distributed.
 
-GitHub automatically attaches "Source code (zip)" and "Source code (tar.gz)" archives to every release - these are auto-generated from this repository and **only contain documentation files** (README, LICENSE, CHANGELOG). They do not contain the application source.
+GitHub automatically attaches "Source code (zip)" and "Source code (tar.gz)" archives to every release - these are auto-generated from this repository and **only contain documentation files** (README, LICENSE, CHANGELOG, ANTIVIRUS). They do not contain the application source.
+
+---
+
+## Antivirus and SmartScreen
+
+NullSync is a compiled, unsigned app, so antivirus or SmartScreen may show a generic warning even though nothing is wrong. This is a common false positive for this kind of software. For the full explanation, how to confirm it for yourself on VirusTotal, and how to allow it, see [ANTIVIRUS.md](ANTIVIRUS.md).
 
 ---
 
