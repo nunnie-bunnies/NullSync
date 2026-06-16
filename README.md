@@ -209,6 +209,8 @@ GitHub automatically attaches "Source code (zip)" and "Source code (tar.gz)" arc
 
 NullSync is a compiled, unsigned app, so antivirus or SmartScreen may show a generic warning even though nothing is wrong. This is a common false positive for this kind of software. For the full explanation, how to confirm it for yourself on VirusTotal, and how to allow it, see [ANTIVIRUS.md](ANTIVIRUS.md).
 
+For the record: NullSync is free and made to help people, so I am not going to pay for a yearly code-signing certificate just to quiet those warnings. It is unsigned because signing costs money, not because anything is wrong with it.
+
 ---
 
 ## System requirements

@@ -18,7 +18,10 @@ ordinary properties of that kind of build push antivirus heuristics to guess
 
 - **It is not code-signed.** Code-signing certificates cost money every year, which
   is hard to justify for a free hobby tool. Unsigned binaries from a small
-  publisher are treated with suspicion by default.
+  publisher are treated with suspicion by default. To be straight about it:
+  NullSync is free and built to help people, so I am not going to pay for a yearly
+  certificate just to quiet a few warnings. The occasional flag is the trade-off,
+  and I would rather keep the tool free than spend money making it look official.
 - **It bundles a runtime.** The download is large because it packs everything it
   needs to run into the install, so you do not have to install Python or anything
   else. Generic scanners sometimes treat "large unfamiliar binary that bundles a
