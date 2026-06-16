@@ -10,6 +10,17 @@ you can make an informed decision, not to talk you past your own judgment.
 
 ---
 
+## Tested on an aggressive antivirus setup
+
+I build and test NullSync on a machine running one of the more aggressive antivirus
+products available, the kind that flags far more than the average scanner. The
+current installer build installs and runs on it with no warning at all. The older
+single-file build was the one that occasionally tripped its heuristics, which is a
+big part of why NullSync now ships as an installer. So the most cautious setup I
+have on hand is happy with the version you are downloading.
+
+---
+
 ## Why this happens
 
 NullSync is written in Python and compiled into a native Windows binary. A few
