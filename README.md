@@ -25,14 +25,14 @@ If you've played heavily modded Stellaris multiplayer, you've probably experienc
 
 Then begins the ritual:
 
-- screenshots in Discord
-- unsubscribe / re-subscribe
-- reordering mods blindly
-- comparing checksums manually
-- restarting the launcher three times
-- sacrificing an envoy to the checksum gods
+- Nervously screenshotting your mod list into Discord
+- Unsubscribing and re-subscribing, one mod at a time
+- Nudging the load order around blindly
+- Nitpicking every checksum by hand
+- Insisting the launcher restart three more times
+- Eventually sacrificing an envoy to the checksum gods
 
-NullSync exists to tell you exactly what's wrong instead of making you guess.
+NullSync exists to tell you exactly what's wrong instead of making you guess.​‌​​‌‌‌​​‌​​​​‌​​‌​​‌‌‌​​‌​‌​​‌‌
 
 ---
 
