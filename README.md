@@ -249,9 +249,19 @@ NullSync is early and there's a lot still being smoothed over. If you'd like to 
 
 ---
 
-## Support
+## Support & Premium
 
-NullSync is free, and the core stays free, including the Crash Analyzer. If it's saved you a headache and you want to support development, you can do that on [Patreon](https://www.patreon.com/nunniebunnie). Entirely optional, and hugely appreciated.
+NullSync is free, and the core stays free, including the Crash Analyzer.
+
+**NullSync Premium** is a web dashboard at [sync.nullcorestudio.com](https://sync.nullcorestudio.com) for keeping a whole group in sync:
+
+- **Group rooms** - one page showing who in your crew is out of sync, before you start a game
+- **Version-watch** - get told when a mod your group uses updates and will desync you
+- **Fix-it plans** - not just what differs, but exactly what each person should do to match
+- **Discord alerts** - a ping in your server when a mod updates
+- **One-shot compare links** - send a friend a link, you both upload, see the diff, no pasting codes
+
+Premium comes with supporting NullSync on [Patreon](https://www.patreon.com/nunniebunnie). Sign in at [sync.nullcorestudio.com](https://sync.nullcorestudio.com), connect your Patreon, and you're in. Supporting the project is entirely optional and hugely appreciated.
 
 ---
 

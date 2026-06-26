@@ -1,5 +1,15 @@
 # Changelog
 
+## v2.1.1 (2026-06-26)
+
+**NullSync Premium is live.**
+
+### Added
+- **NullSync Premium** - a web dashboard at [sync.nullcorestudio.com](https://sync.nullcorestudio.com) for keeping a whole group in sync: group rooms that show who's out of sync at a glance, version-watch that warns you when a mod updates and will desync you, fix-it plans that tell each person exactly what to do, Discord alerts, and one-shot compare links. The Premium tab in the app now opens it. Premium comes with supporting NullSync on Patreon; the app stays free.
+
+### Changed
+- Small under-the-hood improvements to mod fingerprints.
+
 ## v2.1.0 (2026-06-26)
 
 **Crash Analyzer + Linux support.**
