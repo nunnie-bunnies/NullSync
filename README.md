@@ -59,13 +59,16 @@ NullSync exists to tell you exactly what's wrong instead of making you guess.​
 - Compares two fingerprints side-by-side and explains every mismatch
 - Generates a sync checksum from your setup - if yours matches your friend's, you'll connect
 - Diagnose tab: catches broken Workshop subscriptions, mods with script errors, missing dependencies
-- Three themes: Sakura, Cobalt, Midnight
-- Windows 11 Acrylic glass effect (optional)
+- Crash Analyzer: point NullSync at a Stellaris crash and it names the mod most likely responsible, so you stop bisecting your modlist by hand
+- Runs on **Windows and Linux** (64-bit)
+- Customizable app theme
 - Built-in update checker - notified when a new version ships
 
 ---
 
 ## Install
+
+### Windows
 
 1. Grab the `NullSync-Setup` installer from the [Releases page](https://github.com/nunnie-bunnies/NullSync/releases/latest)
 2. Run it. It installs per-user, so no admin rights are needed
@@ -73,6 +76,16 @@ NullSync exists to tell you exactly what's wrong instead of making you guess.​
 4. Settings persist to `%APPDATA%\NullSync\`
 
 Windows SmartScreen or your antivirus may warn you about the unsigned installer. This is normal for small independent projects and does not mean anything is wrong. For SmartScreen, click **More info** then **Run anyway**. For why antivirus sometimes flags compiled apps like this, and how to verify it for yourself, see [ANTIVIRUS.md](ANTIVIRUS.md).
+
+### Linux (x64)
+
+1. Download `NullSync-linux-x64-<version>.tar.gz` from the [Releases page](https://github.com/nunnie-bunnies/NullSync/releases/latest)
+2. Extract it: `tar -xzf NullSync-linux-x64-*.tar.gz`
+3. Make the launcher executable: `chmod +x NullSync`
+4. Run it: `./NullSync`
+5. Settings persist to `~/NullSync/`
+
+The Linux build is newer and less battle-tested than the Windows one. It looks for Stellaris in the usual native and Proton/Steam Play locations; if it can't find your install, use the **Browse** button to point it there manually, and please [open an issue](https://github.com/nunnie-bunnies/NullSync/issues) if a path is missing.
 
 ---
 
@@ -116,17 +129,17 @@ Yes. It reads from your existing Stellaris files and writes only its own setting
 
 No usage data, no file contents, no analytics. The app does two small outbound calls on startup: one to GitHub's public release API to check for a new version, and one anonymous "I exist" heartbeat (sent at most once every 24 hours) so the project can count unique installs. The heartbeat sends only a hashed machine ID, the product name, and the version, with no name, no email, and no file paths. Both calls are gated by the same **Check for updates on startup** toggle in Settings; untick it and both stop.
 
-**Why is the download so big (around 120 MB)?**
+**Why is the download fairly large?**
 
-NullSync bundles everything it needs to run, so you do not have to install Python or anything else. Most of the size is the bundled runtime and UI libraries, not NullSync itself.
+NullSync bundles its own runtime so you do not have to install anything else. The Windows installer is around 50 MB and expands to roughly 160 MB installed; the Linux archive is around 40 MB. Most of that is the bundled runtime and UI libraries, not NullSync itself.
 
-**Do I need Python installed?**
+**Do I need anything else installed?**
 
-No. NullSync is self-contained.
+No. NullSync is self-contained on both Windows and Linux - no separate runtime to install.
 
 **Will it work on Linux or Mac?**
 
-Not currently. Windows 10/11 (64-bit) only.
+Linux: yes, there's a native 64-bit Linux build (see the Install section). It's newer than the Windows build, so expect a few more rough edges. Mac: not currently.
 
 **Windows SmartScreen or my antivirus flagged the download. Is it malware?**
 
@@ -181,17 +194,13 @@ The fix is usually for the affected player to unsubscribe + re-subscribe to the 
 
 Settings > About shows the version you're actually running. If it does not match the latest release tag, your download is stale. If versions match, your browser may have cached an older release page - refresh.
 
-**Tooltips or buttons render outside their boxes / look glitched**
-
-Try toggling the Glass Effect off in Settings, restart NullSync. Some Windows compositor configurations don't handle the Acrylic backdrop well.
-
 **The app refuses to launch / crashes on startup**
 
 Common causes:
 
 1. Antivirus quarantined part of the install. This is a known false positive on compiled apps; see [ANTIVIRUS.md](ANTIVIRUS.md) for why and how to allow it
-2. The settings file at `%APPDATA%\NullSync\settings.json` is corrupted. Delete it and relaunch
-3. Conflict with another Python installation - this should never happen since the runtime is bundled, but rebooting tends to clear weirdness
+2. The settings file is corrupted (`%APPDATA%\NullSync\settings.json` on Windows, `~/NullSync/settings.json` on Linux). Delete it and relaunch
+3. A partial or interrupted install. Reinstall from a fresh download
 
 If none of these help, open an [issue](https://github.com/nunnie-bunnies/NullSync/issues) with the steps to reproduce.
 
@@ -215,9 +224,9 @@ For the record: NullSync is free and made to help people, so I am not going to p
 
 ## System requirements
 
-- Windows 10 or 11, 64-bit
-- Stellaris installed via Steam
-- ~150 MB free disk
+- Windows 10 or 11 (64-bit), or a 64-bit Linux desktop
+- Stellaris installed via Steam (native or Proton/Steam Play on Linux)
+- ~160 MB free disk
 - Internet connection on startup if update checks are enabled (optional)
 
 ---
@@ -237,6 +246,12 @@ Use the [Issues tab](https://github.com/nunnie-bunnies/NullSync/issues) for bugs
 ## Helping out
 
 NullSync is early and there's a lot still being smoothed over. If you'd like to help test new features before they ship, give feedback on rough edges, or play co-op Stellaris sessions to validate mod setups against real multiplayer, hop into the [Discord](https://discord.gg/DRXRnPDmbJ) and say hi. No prior experience needed.
+
+---
+
+## Support
+
+NullSync is free, and the core stays free, including the Crash Analyzer. If it's saved you a headache and you want to support development, you can do that on [Patreon](https://www.patreon.com/nunniebunnie). Entirely optional, and hugely appreciated.
 
 ---
 

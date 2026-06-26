@@ -1,5 +1,19 @@
 # Changelog
 
+## v2.1.0 (2026-06-26)
+
+**Crash Analyzer + Linux support.**
+
+### Added
+- **Crash Analyzer** tab. Point NullSync at a Stellaris crash and it reads the logs and names the mod most likely responsible, so you can stop disabling mods one at a time to find the culprit. It is a best guess from your logs, not a guarantee, but a strong place to start.
+- **Linux build.** NullSync now ships a native 64-bit Linux version alongside Windows. Grab the `.tar.gz` from the release, `chmod +x NullSync`, and run it.
+
+### Changed
+- Warmer gold tone and small UI polish throughout.
+
+### Note
+- NullSync is free and stays free, including the Crash Analyzer. If it has helped you, development can now be supported on [Patreon](https://www.patreon.com/nunniebunnie).
+
 ## v2.0.7 (2026-06-15)
 
 **Installer + fewer antivirus false positives.**
