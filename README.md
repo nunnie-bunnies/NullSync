@@ -10,6 +10,20 @@ When you and a friend can't connect because of a checksum mismatch, NullSync com
 
 ---
 
+## NullSync Premium - keep your whole crew in sync
+
+The app is free forever, Crash Analyzer included. **Premium** is a web dashboard at [sync.nullcorestudio.com](https://sync.nullcorestudio.com) for groups:
+
+- **Crew rooms** - one page showing who in your group is out of sync, before you start a game
+- **Crew modlist** - one click to match the host's exact setup
+- **Ready check** - confirm the whole crew is good to go before you launch
+- **Campaign lock** - freeze your modlist for a save and get warned if a mod update could break it mid-campaign
+- **Version-watch + Discord alerts** - a ping in your server when a mod your crew uses updates
+
+**One person pays, the whole crew plays.** Only the host needs Premium, everyone else joins their rooms free. Subscribe at [patreon.com/nunniebunnie](https://www.patreon.com/nunniebunnie) (from $3/month), then connect your Patreon at [sync.nullcorestudio.com](https://sync.nullcorestudio.com).
+
+---
+
 ## Why NullSync exists
 
 If you've played heavily modded Stellaris multiplayer, you've probably experienced this:
