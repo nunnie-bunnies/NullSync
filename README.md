@@ -4,6 +4,10 @@ NULLSYNC automatically detects Paradox multiplayer incompatibilities including m
 
 > A desktop tool for diagnosing Paradox multiplayer mod mismatches.
 
+![NullSync new look](screenshots/new-look.png)
+
+**New look** - NullSync's interface was refreshed. This shot is current; the tab screenshots below show the same features in the previous theme.
+
 When you and a friend can't connect because of a checksum mismatch, NullSync compares your mod setups and tells you what's actually different. It works even when one of you has a mod that "looks installed" in the launcher but silently failed to load.
 
 **Works with every Paradox game on the modern launcher:** Stellaris, Crusader Kings 3, Hearts of Iron 4, Europa Universalis 4, Victoria 3, and Imperator: Rome. Stellaris is the most battle-tested. Support for the other games is newer and still in beta, so if you hit a rough edge there, [open an issue](https://github.com/nunnie-bunnies/NullSync/issues) and I will get on it.
