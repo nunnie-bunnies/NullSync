@@ -8,7 +8,7 @@ When you and a friend can't connect because of a checksum mismatch, NullSync com
 
 **Works with every Paradox game on the modern launcher:** Stellaris, Crusader Kings 3, Hearts of Iron 4, Europa Universalis 4, Victoria 3, and Imperator: Rome. Stellaris is the most battle-tested. Support for the other games is newer and still in beta, so if you hit a rough edge there, [open an issue](https://github.com/nunnie-bunnies/NullSync/issues) and I will get on it.
 
-[**Download the latest release**](https://github.com/nunnie-bunnies/NullSync/releases/latest)
+[**Download NullSync**](https://nullcorestudio.com/nullsync/download)
 
 ---
 
@@ -86,7 +86,7 @@ NullSync exists to tell you exactly what's wrong instead of making you guess.​
 
 ### Windows
 
-1. Grab the `NullSync-Setup` installer from the [Releases page](https://github.com/nunnie-bunnies/NullSync/releases/latest)
+1. Get the `NullSync-Setup` installer from the [download page](https://nullcorestudio.com/nullsync/download) (enter your email and the download link is sent right away)
 2. Run it. It installs per-user, so no admin rights are needed
 3. Launch NullSync from the Start menu (or the desktop shortcut if you chose one)
 4. Settings persist to `%APPDATA%\NullSync\`
@@ -95,7 +95,7 @@ Windows SmartScreen or your antivirus may warn you about the unsigned installer.
 
 ### Linux (x64)
 
-1. Download `NullSync-linux-x64-<version>.tar.gz` from the [Releases page](https://github.com/nunnie-bunnies/NullSync/releases/latest)
+1. Get `NullSync-linux-x64-<version>.tar.gz` from the [download page](https://nullcorestudio.com/nullsync/download)
 2. Extract it: `tar -xzf NullSync-linux-x64-*.tar.gz`
 3. Make the launcher executable: `chmod +x NullSync`
 4. Run it: `./NullSync`
