@@ -12,20 +12,6 @@ When you and a friend can't connect because of a checksum mismatch, NullSync com
 
 ---
 
-## NullSync Premium - keep your whole crew in sync
-
-The app is free forever, Crash Analyzer included. **Premium** is a web dashboard at [sync.nullcorestudio.com](https://sync.nullcorestudio.com) for groups:
-
-- **Crew rooms** - one page showing who in your group is out of sync, before you start a game
-- **Crew modlist** - one click to match the host's exact setup
-- **Ready check** - confirm the whole crew is good to go before you launch
-- **Campaign lock** - freeze your modlist for a save and get warned if a mod update could break it mid-campaign
-- **Version-watch + Discord alerts** - a ping in your server when a mod your crew uses updates
-
-**One person pays, the whole crew plays.** Only the host needs Premium, everyone else joins their rooms free. Subscribe at [patreon.com/nunniebunnie](https://www.patreon.com/nunniebunnie) (from $3/month), then connect your Patreon at [sync.nullcorestudio.com](https://sync.nullcorestudio.com).
-
----
-
 ## Why NullSync exists
 
 If you've played heavily modded Paradox multiplayer, you've probably experienced this:
@@ -265,19 +251,11 @@ NullSync is early and there's a lot still being smoothed over. If you'd like to 
 
 ---
 
-## Support & Premium
+## Support
 
 NullSync is free, and the core stays free, including the Crash Analyzer.
 
-**NullSync Premium** is a web dashboard at [sync.nullcorestudio.com](https://sync.nullcorestudio.com) for keeping a whole group in sync:
-
-- **Group rooms** - one page showing who in your crew is out of sync, before you start a game
-- **Version-watch** - get told when a mod your group uses updates and will desync you
-- **Fix-it plans** - not just what differs, but exactly what each person should do to match
-- **Discord alerts** - a ping in your server when a mod updates
-- **One-shot compare links** - send a friend a link, you both upload, see the diff, no pasting codes
-
-Premium comes with supporting NullSync on [Patreon](https://www.patreon.com/nunniebunnie). Sign in at [sync.nullcorestudio.com](https://sync.nullcorestudio.com), connect your Patreon, and you're in. Supporting the project is entirely optional and hugely appreciated.
+NullSync Premium (the crew dashboard) has been discontinued and is no longer available. The app is not affected.
 
 ---
 
